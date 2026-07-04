@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Childer Selector In Html.</title>
+    <!-- here we target the child element of the parent element. In this example we have a parent element which is "ol" and the child element is "li". So we are targeting the child element of the parent element.and set its color to blue -->
+    <style>
+        ul>li {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li> This is the List Item One.</li>
+        <li>This is the List Item 2nd.</li>
+        <ul>
+            <li>This is the Sub List Item.one.</li>
+            <li>This is the Sub Item 2nd .</li>
+        </ul>
+        <li>This is the List Item 3rd.</li>
+    </ol>
+</body>
+
+</html>
