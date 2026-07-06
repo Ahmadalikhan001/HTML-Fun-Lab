@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Selecters.</title>
+    <style>
+        #a,
+        #b {
+            color: blue;
+            font-weight: bold;
+            background-color: rgb(105, 216, 226);
+            height: fit-content;
+            width: fit-content;
+            text-align: center;
+            margin: 10px;
+        }
+
+        ol>ul {
+            color: rgb(42, 59, 18);
+            background-color: bisque;
+            font-weight: bold;
+        }
+
+        a[href="https://facebook.com"] {
+            color: Green
+        }
+    </style>
+</head>
+
+<body>
+    <P id="a">a,b selecter Mean Multiple Element selecter. </P>
+    <p id="b">For example we selecte the id a and id b selecter mean the paragraph a and b different id but we we apply
+        Sthe same css styling.</p>
+    <h1>Child Selecter.</h1>
+    <ol>
+        <li>This first Parent Item.</li>
+        <li>This 2nd Parent Item.</li>
+        <li>This 3rd Parent Item.</li>
+        <ul>
+            <li>This is the unorder list and also the first child item. </li>
+            <li>2nd Child Item</li>
+            <li>3rdChild Item.</li>
+        </ul>
+    </ol>
+    <h1>Attrebute Selecter.Here We targated the Facebook.com to change it's color. </h1>
+    <ol>
+        <li><a href="https://google.com" target="_blank">Google.com</a>
+        </li>
+        <li><a href="https://facebook.com" target="_blank">Facebook.com</a></li>
+        <li><a href="https://amazon.com" target="_blank">Amazon.com</a></li>
+    </ol>
+    <h2>The Pesoudo Selecter.bassically if we use hovring effect at any Tage or Element this is the Pesoudo Selecter we
+        use.</h2>
+    <p>For Example in this style someting Button:hover{ add CSS here.
+        } or Button:active{ add CSS here.
+
+        }, and so on</p>
+
+
+</body>
+
+</html>
