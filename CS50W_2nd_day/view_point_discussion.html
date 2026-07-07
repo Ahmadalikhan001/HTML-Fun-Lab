@@ -7,6 +7,21 @@
     <title>Responsive Design.
     </title>
     <style>
+        body {
+            width: 400px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            background-color: lightblue;
+            padding: 10px
+        }
+
+        @media(max-width:600px) {
+            body {
+                width: 100%;
+            }
+        }
+
         table {
             background-color: aquamarine;
             border-collapse: collapse;
