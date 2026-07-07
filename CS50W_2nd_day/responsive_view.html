@@ -8,12 +8,24 @@
     </title>
 </head>
 <style>
-    div {
-        width: 400px;
+    * {
+        box-sizing: content-box;
     }
 
-    @media(max-width:600px) {
-        div {
+    .container {
+        width: 400px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .container div {
+        background-color: lightblue;
+        padding: 10px;
+    }
+
+    @media(max-width:500px) {
+        .container {
             width: 100%;
         }
     }
@@ -21,12 +33,12 @@
 
 <body>
     <div class="container">
-        <div>div One </div>
-        <div>div Two </div>
-        <div>div Three </div>
-        <div>div Four </div>
-        <div>div Five </div>
-        <div>div Six </div>
+        <div>div One</div>
+        <div>div Two</div>
+        <div>div Three</div>
+        <div>div Four</div>
+        <div>div Five</div>
+        <div>div Six</div>
     </div>
 </body>
 
