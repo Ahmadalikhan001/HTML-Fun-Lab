@@ -4,125 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Student Table</title>
+
+    <title>Student Information Table</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #6dd5ed, #2193b0);
             min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px;
+            padding: 30px;
         }
 
-        .container {
-            width: 95%;
-            max-width: 1200px;
+        .table-container {
+            width: 100%;
+            max-width: 1100px;
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
             text-align: center;
-            color: white;
-            margin-bottom: 20px;
-            font-size: 40px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 35px;
         }
+
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
-            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+            border-radius: 15px;
         }
+
 
         thead {
-            background: linear-gradient(to right, #667eea, #764ba2);
+            background: #2563eb;
             color: white;
         }
+
 
         th {
-            padding: 18px;
-            font-size: 17px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            padding: 16px;
+            font-size: 16px;
         }
+
 
         td {
-            padding: 15px;
+            padding: 14px;
             text-align: center;
             border-bottom: 1px solid #ddd;
-            transition: .3s;
         }
+
 
         tbody tr:nth-child(even) {
-            background: #f5f7fa;
+            background: #f3f4f6;
         }
+
 
         tbody tr:hover {
-            background: #d6f0ff;
+            background: #dbeafe;
+            transition: 0.3s;
             transform: scale(1.01);
-            cursor: pointer;
         }
 
-        .selected,
-        .pending,
-        .rejected {
-            color: white;
-            padding: 6px 14px;
+
+        .status {
+            padding: 7px 15px;
             border-radius: 20px;
+            color: white;
             font-weight: bold;
         }
 
+
         .selected {
-            background: #28a745;
+            background: #16a34a;
         }
+
 
         .pending {
-            background: #f39c12;
+            background: #f59e0b;
         }
+
 
         .rejected {
-            background: #e74c3c;
+            background: #dc2626;
         }
 
-        @media(max-width:768px) {
+
+        @media(max-width:700px) {
 
             table {
-                font-size: 14px;
+                font-size: 12px;
             }
 
             th,
             td {
-                padding: 10px;
+                padding: 8px;
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 25px;
             }
 
         }
     </style>
+
 </head>
+
 
 <body>
 
-    <div class="container">
 
-        <h1>🎓 Student Performance Report</h1>
+    <div class="table-container">
+
+        <h1>🎓 Student Result Dashboard</h1>
+
 
         <table>
 
             <thead>
+
                 <tr>
                     <th>ID</th>
                     <th>Country</th>
@@ -130,175 +143,200 @@
                     <th>Score</th>
                     <th>Status</th>
                 </tr>
+
             </thead>
 
+
             <tbody>
+
 
                 <tr>
                     <td>1</td>
                     <td>Pakistan</td>
                     <td>Ahmad Ali Khan</td>
                     <td>95</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>2</td>
                     <td>Malaysia</td>
-                    <td>Nur Aisyah</td>
+                    <td>Ali Hassan</td>
                     <td>88</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>3</td>
                     <td>Canada</td>
                     <td>John Smith</td>
-                    <td>73</td>
-                    <td><span class="pending">Pending</span></td>
+                    <td>76</td>
+                    <td><span class="status pending">Pending</span></td>
                 </tr>
+
 
                 <tr>
                     <td>4</td>
                     <td>USA</td>
                     <td>Emily Johnson</td>
-                    <td>81</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td>82</td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>5</td>
-                    <td>United Kingdom</td>
+                    <td>UK</td>
                     <td>Oliver Brown</td>
-                    <td>62</td>
-                    <td><span class="pending">Pending</span></td>
+                    <td>67</td>
+                    <td><span class="status rejected">Rejected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>6</td>
                     <td>Australia</td>
                     <td>Sophia Wilson</td>
-                    <td>92</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td>91</td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>7</td>
                     <td>Germany</td>
                     <td>Liam Miller</td>
-                    <td>56</td>
-                    <td><span class="rejected">Rejected</span></td>
+                    <td>59</td>
+                    <td><span class="status rejected">Rejected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>8</td>
                     <td>France</td>
                     <td>Emma Davis</td>
                     <td>84</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>9</td>
                     <td>Italy</td>
                     <td>Noah Anderson</td>
-                    <td>70</td>
-                    <td><span class="pending">Pending</span></td>
+                    <td>73</td>
+                    <td><span class="status pending">Pending</span></td>
                 </tr>
+
 
                 <tr>
                     <td>10</td>
                     <td>Japan</td>
                     <td>Haruto Tanaka</td>
-                    <td>98</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td>97</td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>11</td>
                     <td>China</td>
                     <td>Wei Zhang</td>
-                    <td>79</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td>80</td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>12</td>
                     <td>India</td>
                     <td>Rahul Sharma</td>
-                    <td>66</td>
-                    <td><span class="pending">Pending</span></td>
+                    <td>69</td>
+                    <td><span class="status pending">Pending</span></td>
                 </tr>
+
 
                 <tr>
                     <td>13</td>
                     <td>South Korea</td>
-                    <td>Min-Jun Kim</td>
-                    <td>91</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td>Min Kim</td>
+                    <td>90</td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>14</td>
                     <td>Turkey</td>
                     <td>Mehmet Kaya</td>
-                    <td>54</td>
-                    <td><span class="rejected">Rejected</span></td>
+                    <td>63</td>
+                    <td><span class="status rejected">Rejected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>15</td>
                     <td>Brazil</td>
                     <td>Lucas Silva</td>
                     <td>85</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>16</td>
                     <td>Spain</td>
                     <td>Carlos Garcia</td>
                     <td>74</td>
-                    <td><span class="pending">Pending</span></td>
+                    <td><span class="status pending">Pending</span></td>
                 </tr>
+
 
                 <tr>
                     <td>17</td>
                     <td>Russia</td>
                     <td>Ivan Petrov</td>
                     <td>58</td>
-                    <td><span class="rejected">Rejected</span></td>
+                    <td><span class="status rejected">Rejected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>18</td>
                     <td>Singapore</td>
                     <td>Grace Lim</td>
-                    <td>94</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td>93</td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
                 <tr>
                     <td>19</td>
                     <td>New Zealand</td>
-                    <td>Jack Thompson</td>
+                    <td>Jack Wilson</td>
                     <td>77</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td><span class="status pending">Pending</span></td>
                 </tr>
+
 
                 <tr>
                     <td>20</td>
                     <td>UAE</td>
                     <td>Omar Hassan</td>
-                    <td>83</td>
-                    <td><span class="selected">Selected</span></td>
+                    <td>86</td>
+                    <td><span class="status selected">Selected</span></td>
                 </tr>
+
 
             </tbody>
 
         </table>
 
+
     </div>
+
 
 </body>
 
