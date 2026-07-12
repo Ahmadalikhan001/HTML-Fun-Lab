@@ -4,35 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Exersics</title>
+    <title>Student Table</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            width: 700px;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #007BFF;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:hover {
+            background: #dbeafe;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<style>
-    table {
-        color: red;
-        background-color: burlywood;
-        display: flex;
-        padding: 10px;
-        margin: 10px;
-    }
-</style>
 
 <body>
+
     <table>
+
         <tr>
-            <th>
-            <td>Country Name</td>
-            <td>Student Name</td>
-            <td>Score</td>
-            <td>status</td>
-            </th>
+            <th>Country Name</th>
+            <th>Student Name</th>
+            <th>Score</th>
+            <th>Status</th>
         </tr>
+
         <tr>
             <td>Pakistan</td>
             <td>Hamza Ali</td>
             <td>53</td>
             <td>Selected</td>
         </tr>
+
+        <tr>
+            <td>Malaysia</td>
+            <td>Ahmad Ali Khan</td>
+            <td>92</td>
+            <td>Selected</td>
+        </tr>
+
+        <tr>
+            <td>Canada</td>
+            <td>John Smith</td>
+            <td>81</td>
+            <td>Selected</td>
+        </tr>
+
     </table>
+
 </body>
 
 </html>
