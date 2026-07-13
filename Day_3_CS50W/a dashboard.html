@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Student Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Segoe UI, Arial;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            padding: 30px
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, .95);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .25)
+        }
+
+        h1 {
+            text-align: center
+        }
+
+        .cards {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0
+        }
+
+        .card {
+            flex: 1;
+            min-width: 180px;
+            padding: 16px;
+            border-radius: 12px;
+            color: #fff
+        }
+
+        .c1 {
+            background: #2563eb
+        }
+
+        .c2 {
+            background: #16a34a
+        }
+
+        .c3 {
+            background: #f59e0b
+        }
+
+        .c4 {
+            background: #dc2626
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        thead {
+            position: sticky;
+            top: 0;
+            background: #1e293b;
+            color: #fff
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f5f5f5
+        }
+
+        tbody tr:hover {
+            background: #dbeafe
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: #fff
+        }
+
+        .Selected {
+            background: #16a34a
+        }
+
+        .Pending {
+            background: #f59e0b
+        }
+
+        .Rejected {
+            background: #dc2626
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>🎓 Student Dashboard</h1>
+        <div class="cards">
+            <div class="card c1">Total<br><b id=t></b></div>
+            <div class="card c2">Selected<br><b id=s></b></div>
+            <div class="card c3">Pending<br><b id=p></b></div>
+            <div class="card c4">Rejected<br><b id=r></b></div>
+        </div>
+        <input id=q placeholder="Search by name or country...">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Country</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id=tb></tbody>
+        </table>
+    </div>
+    <script>
+        const countries = ["Pakistan", "Malaysia", "Canada", "USA", "UK", "Australia", "Germany", "France", "Italy", "Japan", "China", "India", "Brazil", "Spain", "Turkey", "Singapore", "UAE", "Russia", "Korea", "NZ"];
+        const names = ["Ahmad", "Ali", "Hamza", "John", "Emily", "Sophia", "Oliver", "Emma", "Noah", "Lucas", "Carlos", "Rahul", "Grace", "Jack", "Wei", "Min", "Omar", "Haruto", "Ivan", "Aisyah"];
+        let sel = 0, pen = 0, rej = 0, tb = document.getElementById('tb');
+        for (let i = 1; i <= 100; i++) {
+            let c = countries[i % countries.length], n = names[i % names.length] + " " + i, score = 50 + Math.floor(Math.random() * 51), st = "Selected";
+            if (score < 60) st = "Rejected"; else if (score < 75) st = "Pending";
+            if (st == "Selected") sel++; else if (st == "Pending") pen++; else rej++;
+            tb.innerHTML += `<tr><td>${i}</td><td>${c}</td><td>${n}</td><td>${score}</td><td><span class="badge ${st}">${st}</span></td></tr>`;
+        }
+        t.textContent = 100; s.textContent = sel; p.textContent = pen; r.textContent = rej;
+        q.oninput = e => { let v = e.target.value.toLowerCase();[...tb.rows].forEach(r => r.style.display = r.innerText.toLowerCase().includes(v) ? "" : "none") }
+    </script>
+</body>
+
+</html>
