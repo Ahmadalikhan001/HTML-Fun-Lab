@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Pattern Validation</title>
+</head>
+
+<body>
+
+    <h1>HTML Pattern Validation</h1>
+
+    <p>
+        The <code>pattern</code> attribute is one of the most powerful HTML validation features.
+        It defines exactly what the user is allowed to enter.
+    </p>
+
+    <h2>Example 1</h2>
+
+    <p>
+        This example allows the user to enter one or more digits (0 - 9).
+    </p>
+
+    <form>
+        <input type="text" pattern="[0-9]+" required title="Enter numbers only">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>
+        The <strong>+</strong> symbol means one or more digits.
+    </p>
+
+    <hr>
+
+    <h2>Real-Life Example</h2>
+
+    <p>
+        A student ID must be in the format <strong>ST1234</strong>.
+    </p>
+
+    <form>
+        <input type="text" pattern="ST[0-9]{4}" required placeholder="ST1234" title="Enter ST followed by 4 digits">
+
+        <button type="submit">Submit</button>
+    </form>
+    <h1>Example 2</h1>
+
+    <p>
+        This example allows the user to enter at least one uppercase letter,
+        one lowercase letter, one number, and a minimum of 8 characters.
+    </p>
+
+    <form>
+        <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" placeholder="Example: Abc09879"
+            title="Must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long."
+            required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
