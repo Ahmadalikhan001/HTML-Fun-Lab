@@ -38,6 +38,365 @@
     <footer>
         Footer
     </footer>
+    <p>Why Use Semantic HTML?
+        1. Easier to Read
+
+        Instead of:
+
+    <div class="header">
+
+        You immediately know the purpose with:
+
+        <header>
+            2. Better for Search Engines (SEO)
+
+            Search engines can better understand your page.
+
+            For example:
+
+            <header>
+                <nav>
+                    <main>
+                        <article>
+                            <footer>
+
+                                This helps them understand the page structure.
+
+                                3. Better Accessibility
+
+                                People using screen readers can navigate your page more easily because the landmarks
+                                have clear meaning.
+
+                                4. Easier to Maintain
+
+                                After six months, this:
+
+                                <div class="box1">
+                                    <div class="box2">
+                                        <div class="box3">
+
+                                            is much harder to understand than:
+
+                                            <header>
+                                                <nav>
+                                                    <main>
+                                                        <footer>
+                                                            Most Important Semantic Tags
+                                                            1. <header>
+
+                                                                The top section of a page or section.
+
+                                                                Example:
+
+                                                                <header>
+                                                                    <h1>My Portfolio</h1>
+                                                                </header>
+
+                                                                Real-life example:
+
+                                                                The top banner of a university website containing the
+                                                                logo and title.
+
+                                                                2. <nav>
+
+                                                                    Contains navigation links.
+
+                                                                    <nav>
+                                                                        <a href="#">Home</a>
+                                                                        <a href="#">About</a>
+                                                                        <a href="#">Contact</a>
+                                                                    </nav>
+
+                                                                    Real-life example:
+
+                                                                    The menu on an online shopping website.
+
+                                                                    3. <main>
+
+                                                                        The main content of the page.
+
+                                                                        <main>
+                                                                            <h2>Welcome</h2>
+                                                                            <p>This is my website.</p>
+                                                                        </main>
+
+                                                                        There should generally be only one <main>
+                                                                            element per page.
+
+                                                                            4. <section>
+
+                                                                                Groups related content.
+
+                                                                                <section>
+                                                                                    <h2>Our Services</h2>
+                                                                                    <p>Web Development</p>
+                                                                                </section>
+
+                                                                                Real-life example:
+
+                                                                                A "Services" section on a company
+                                                                                website.
+
+                                                                                5. <article>
+
+                                                                                    Represents content that could stand
+                                                                                    on its own.
+
+                                                                                    <article>
+                                                                                        <h2>HTML Basics</h2>
+                                                                                        <p>Learn HTML step by step.</p>
+                                                                                    </article>
+
+                                                                                    Real-life examples:
+
+                                                                                    Blog posts
+                                                                                    News articles
+                                                                                    Forum posts
+                                                                                    6. <aside>
+
+                                                                                        Content related to the main
+                                                                                        content but not part of it.
+
+                                                                                        <aside>
+                                                                                            <h3>Related Articles</h3>
+                                                                                        </aside>
+
+                                                                                        Real-life examples:
+
+                                                                                        Advertisements
+                                                                                        Related posts
+                                                                                        Sidebar widgets
+                                                                                        7. <footer>
+
+                                                                                            The bottom part of a page or
+                                                                                            section.
+
+                                                                                            <footer>
+                                                                                                <p>© 2026 Ahmad Ali Khan
+                                                                                                </p>
+                                                                                            </footer>
+
+                                                                                            Usually contains:
+
+                                                                                            Copyright
+                                                                                            Contact information
+                                                                                            Social media links
+                                                                                            Complete Website Example
+                                                                                            <!DOCTYPE html>
+                                                                                            <html>
+
+                                                                                            <head>
+                                                                                                <title>Semantic HTML
+                                                                                                </title>
+                                                                                            </head>
+
+                                                                                            <body>
+
+                                                                                                <header>
+                                                                                                    <h1>My Portfolio
+                                                                                                    </h1>
+                                                                                                </header>
+
+                                                                                                <nav>
+                                                                                                    <a href="#">Home</a>
+                                                                                                    <a
+                                                                                                        href="#">Projects</a>
+                                                                                                    <a
+                                                                                                        href="#">Contact</a>
+                                                                                                </nav>
+
+                                                                                                <main>
+
+                                                                                                    <section>
+
+                                                                                                        <h2>About Me
+                                                                                                        </h2>
+
+                                                                                                        <article>
+                                                                                                            <p>
+                                                                                                                I am a
+                                                                                                                web
+                                                                                                                developer.
+                                                                                                            </p>
+                                                                                                        </article>
+
+                                                                                                    </section>
+
+                                                                                                    <aside>
+                                                                                                        <h3>Latest News
+                                                                                                        </h3>
+                                                                                                        <p>New course
+                                                                                                            available.
+                                                                                                        </p>
+                                                                                                    </aside>
+
+                                                                                                </main>
+
+                                                                                                <footer>
+                                                                                                    <p>Copyright 2026
+                                                                                                    </p>
+                                                                                                </footer>
+
+                                                                                            </body>
+
+                                                                                            </html>
+                                                                                            Visual Structure
+                                                                                            ----------------------------------
+                                                                                            | HEADER |
+                                                                                            ----------------------------------
+                                                                                            | Navigation Menu (NAV) |
+                                                                                            ----------------------------------
+                                                                                            | |
+                                                                                            | MAIN |
+                                                                                            | |
+                                                                                            | SECTION |
+                                                                                            | ├── ARTICLE |
+                                                                                            | |
+                                                                                            | ASIDE |
+                                                                                            ----------------------------------
+                                                                                            | FOOTER |
+                                                                                            ----------------------------------
+                                                                                            When Should You Use <div>?
+
+                                                                                                Use <div> only when
+                                                                                                    there isn't a
+                                                                                                    semantic element
+                                                                                                    that fits.
+
+                                                                                                    For example:
+
+                                                                                                    <div class="card">
+                                                                                                        <img src="phone.jpg"
+                                                                                                            alt="Phone">
+                                                                                                        <h3>Phone</h3>
+                                                                                                        <p>$499</p>
+                                                                                                    </div>
+
+                                                                                                    A product card
+                                                                                                    doesn't have its own
+                                                                                                    dedicated semantic
+                                                                                                    tag, so <div> is
+                                                                                                        appropriate.
+
+                                                                                                        Quick Comparison
+                                                                                                        Non-Semantic
+                                                                                                        Semantic Purpose
+                                                                                                        <div>
+                                                                                                            <header> Top
+                                                                                                                section
+                                                                                                                <div>
+                                                                                                                    <nav>
+                                                                                                                        Navigation
+                                                                                                                        links
+                                                                                                                        <div>
+                                                                                                                            <main>
+                                                                                                                                Main
+                                                                                                                                page
+                                                                                                                                content
+                                                                                                                                <div>
+                                                                                                                                    <section>
+                                                                                                                                        Group
+                                                                                                                                        related
+                                                                                                                                        content
+                                                                                                                                        <div>
+                                                                                                                                            <article>
+                                                                                                                                                Independent
+                                                                                                                                                content
+                                                                                                                                                <div>
+                                                                                                                                                    <aside>
+                                                                                                                                                        Sidebar
+                                                                                                                                                        or
+                                                                                                                                                        related
+                                                                                                                                                        information
+                                                                                                                                                        <div>
+                                                                                                                                                            <footer>
+                                                                                                                                                                Bottom
+                                                                                                                                                                section
+                                                                                                                                                                Easy
+                                                                                                                                                                Way
+                                                                                                                                                                to
+                                                                                                                                                                Remember
+
+                                                                                                                                                                Imagine
+                                                                                                                                                                you're
+                                                                                                                                                                building
+                                                                                                                                                                a
+                                                                                                                                                                house:
+
+                                                                                                                                                                🏠
+                                                                                                                                                                <header>
+                                                                                                                                                                    →
+                                                                                                                                                                    Front
+                                                                                                                                                                    entrance
+                                                                                                                                                                    🧭
+                                                                                                                                                                    <nav>
+                                                                                                                                                                        →
+                                                                                                                                                                        Hallway
+                                                                                                                                                                        signs
+                                                                                                                                                                        that
+                                                                                                                                                                        guide
+                                                                                                                                                                        you
+                                                                                                                                                                        🛋️
+                                                                                                                                                                        <main>
+                                                                                                                                                                            →
+                                                                                                                                                                            Living
+                                                                                                                                                                            room
+                                                                                                                                                                            (main
+                                                                                                                                                                            area)
+                                                                                                                                                                            📖
+                                                                                                                                                                            <section>
+                                                                                                                                                                                →
+                                                                                                                                                                                Different
+                                                                                                                                                                                rooms
+                                                                                                                                                                                (Bedroom,
+                                                                                                                                                                                Kitchen,
+                                                                                                                                                                                etc.)
+                                                                                                                                                                                📰
+                                                                                                                                                                                <article>
+                                                                                                                                                                                    →
+                                                                                                                                                                                    A
+                                                                                                                                                                                    complete
+                                                                                                                                                                                    magazine
+                                                                                                                                                                                    or
+                                                                                                                                                                                    newspaper
+                                                                                                                                                                                    inside
+                                                                                                                                                                                    a
+                                                                                                                                                                                    room
+                                                                                                                                                                                    📌
+                                                                                                                                                                                    <aside>
+                                                                                                                                                                                        →
+                                                                                                                                                                                        Notice
+                                                                                                                                                                                        board
+                                                                                                                                                                                        on
+                                                                                                                                                                                        the
+                                                                                                                                                                                        wall
+                                                                                                                                                                                        🚪
+                                                                                                                                                                                        <footer>
+                                                                                                                                                                                            →
+                                                                                                                                                                                            Back
+                                                                                                                                                                                            exit
+
+                                                                                                                                                                                            Each
+                                                                                                                                                                                            room
+                                                                                                                                                                                            has
+                                                                                                                                                                                            a
+                                                                                                                                                                                            clear
+                                                                                                                                                                                            purpose,
+                                                                                                                                                                                            just
+                                                                                                                                                                                            like
+                                                                                                                                                                                            semantic
+                                                                                                                                                                                            HTML
+                                                                                                                                                                                            tags
+                                                                                                                                                                                            give
+                                                                                                                                                                                            meaning
+                                                                                                                                                                                            to
+                                                                                                                                                                                            different
+                                                                                                                                                                                            parts
+                                                                                                                                                                                            of
+                                                                                                                                                                                            your
+                                                                                                                                                                                            webpage.
+                                                                                                                                                                                            </p>
+
 
 </body>
 
